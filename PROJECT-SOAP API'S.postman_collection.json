@@ -1,0 +1,61 @@
+{
+	"info": {
+		"_postman_id": "45b3ba01-6677-4ec1-8df5-b1ba58be0ad1",
+		"name": "PROJECT-SOAP API'S",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33475903"
+	},
+	"item": [
+		{
+			"name": "POSITIVE TC",
+			"item": [
+				{
+					"name": "ADD",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": " text/xml; charset=utf-8"
+							},
+							{
+								"key": "SOAPAction",
+								"value": " \"http://tempuri.org/Add\""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n    <Add xmlns=\"http://tempuri.org/\">\r\n      <intA>10</intA>\r\n      <intB>5</intB>\r\n    </Add>\r\n  </soap:Body>\r\n</soap:Envelope>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://www.dneonline.com/calculator.asmx",
+							"protocol": "http",
+							"host": [
+								"www",
+								"dneonline",
+								"com"
+							],
+							"path": [
+								"calculator.asmx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SUBTRACT",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
